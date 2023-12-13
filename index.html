@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+  
+   #root{
+     width: 800px;
+     font-family: Arial, Helvetica, sans-serif;
+     padding: 1rem;
+   }
+
+   #root *{
+    margin-bottom: 0 10px;
+   }
+
+    h1{
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    p{
+        font-size: 18px;
+        line-height: 30px;
+    }
+</style>
+
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/babel-standalone@6/babel.js"></script>
+
+    <script type="text/babel">
+        // Define a component called Greetings
+        // function Greetings() {
+        //   return <h1>Hello readers, Thankyou for reading this blog !</h1>;
+        // }
+        const heading = 'Leran Web Developement';
+
+        const linkElement =  React.createElement('a', {href : "https://www.mdn.com"}, 'Click Here');
+        console.log(linkElement)
+
+        
+        
+        const text1 = `Welcome to the MDN learning area. This set of articles aims to guide completebeginners to web development with all that   they need to start coding websites`;
+                        
+
+        const text3 = `If you are a complete beginner, web development can be challenging — we will hold
+                        your hand and provide enough detail for you to feel comfortable and learn the topics
+                        properly. You should feel at home whether you are a student learning web
+                        development (on your own or as part of a class), a teacher looking for class
+                        materials, a hobbyist, or someone who just wants to understand more about how
+                        web technologies work.`
+
+       
+        const element = [
+                React.createElement('h1', null, heading),
+                React.createElement('p', null,'The aim of this area of MDN is not to take you from "beginner" to "expert" but to take you from "beginner" to "comfortable." From there, you should be able to start making your way, learning from ',
+					React.createElement('a', { href: '#' }, 'the rest of the MDN'),
+					', and other intermediate to advanced resources that assume a lot of previous knowledge.' ),
+                // React.createElement('p', null, text2),
+                React.createElement('p', null, text3),
+         ]
+
+        // Render the component to the DOM
+        ReactDOM.render(element,
+            document.getElementById("root")
+        );
+    </script>
+
+</body>
+
+</html>
